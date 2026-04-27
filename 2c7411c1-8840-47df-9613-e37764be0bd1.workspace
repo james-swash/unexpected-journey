@@ -1,0 +1,21 @@
+{
+  "metadata": {
+    "id": "2c7411c1-8840-47df-9613-e37764be0bd1",
+    "platformVersion": "10.0.0",
+    "createdAt": "2026-04-27T15:38:18Z",
+    "createdBy": "8b556a4c-9ed1-4104-a4f4-5b8c2c7088b6",
+    "schemaVersion": "1.0.0"
+  },
+  "content": {
+    "id": "2c7411c1-8840-47df-9613-e37764be0bd1",
+    "icon": "radio_button_unchecked",
+    "accent": "#f3d20e",
+    "route": "unexpected-journey",
+    "description": "Odin Testing",
+    "cmsEnabled": false,
+    "repositoryUrl": "https://github.com/james-swash/unexpected-journey.git",
+    "workspaceId": "2c7411c1-8840-47df-9613-e37764be0bd1",
+    "resourceId": "2c7411c1-8840-47df-9613-e37764be0bd1",
+    "name": "Unexpected Journey"
+  }
+}
