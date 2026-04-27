@@ -1,0 +1,387 @@
+{
+  "metadata": {
+    "id": "0ecf74b2-0744-4a75-bd0f-6f61a1f1d4f7",
+    "platformVersion": "10.0.0",
+    "createdAt": "2026-04-27T16:41:52Z",
+    "createdBy": "8b556a4c-9ed1-4104-a4f4-5b8c2c7088b6",
+    "schemaVersion": "1.0.0"
+  },
+  "content": {
+    "projectId": "27a14770-cf82-428c-98c8-2bca8878cdb5",
+    "description": "Capture alert from external environment",
+    "associatedUserId": "8b556a4c-9ed1-4104-a4f4-5b8c2c7088b6",
+    "botIds": [],
+    "version": 1,
+    "actions": [
+      {
+        "name": "Set Variable",
+        "type": "VariableSetV2",
+        "version": "1.1.2",
+        "actionId": "a82b1ce2-5cd6-4aa2-ab06-340b3a44db10",
+        "actionDefinitionActionId": "32b3480c-118e-42ce-99dd-1c25aa93d742",
+        "disabled": false,
+        "created": "0001-01-01T00:00:00Z",
+        "updated": "0001-01-01T00:00:00Z",
+        "isDeactivated": false,
+        "parameters": [
+          {
+            "key": "variable",
+            "type": "String",
+            "value": "\u0022alert_message\u0022"
+          },
+          {
+            "key": "variableType",
+            "type": "String",
+            "value": "\u0022String\u0022"
+          },
+          {
+            "key": "data",
+            "type": "String",
+            "value": "\u0022$$Body{$.message}$$\u0022"
+          },
+          {
+            "key": "failOnError",
+            "type": "Boolean",
+            "value": "true"
+          },
+          {
+            "key": "redacted",
+            "type": "Boolean",
+            "value": "false"
+          }
+        ],
+        "actions": [],
+        "context": [],
+        "tables": [],
+        "lists": [],
+        "variableMappings": [
+          {
+            "actionId": "a82b1ce2-5cd6-4aa2-ab06-340b3a44db10",
+            "actionResult": "a82b1ce2-5cd6-4aa2-ab06-340b3a44db10:alert_message",
+            "variableName": "alert_message",
+            "type": "String"
+          }
+        ],
+        "variables": [],
+        "results": [],
+        "logs": [],
+        "status": 0,
+        "breakPoint": "None",
+        "datastoreReferences": []
+      },
+      {
+        "name": "Set Variable",
+        "type": "VariableSetV2",
+        "version": "1.1.2",
+        "actionId": "d00d53a0-e3a1-45ff-9b58-67547e2787f0",
+        "actionDefinitionActionId": "32b3480c-118e-42ce-99dd-1c25aa93d742",
+        "disabled": false,
+        "created": "0001-01-01T00:00:00Z",
+        "updated": "0001-01-01T00:00:00Z",
+        "isDeactivated": false,
+        "parameters": [
+          {
+            "key": "variable",
+            "type": "String",
+            "value": "\u0022environment\u0022"
+          },
+          {
+            "key": "variableType",
+            "type": "String",
+            "value": "\u0022String\u0022"
+          },
+          {
+            "key": "data",
+            "type": "String",
+            "value": "\u0022$$Body{$.env}$$\u0022"
+          },
+          {
+            "key": "failOnError",
+            "type": "Boolean",
+            "value": "true"
+          },
+          {
+            "key": "redacted",
+            "type": "Boolean",
+            "value": "false"
+          }
+        ],
+        "actions": [],
+        "context": [],
+        "tables": [],
+        "lists": [],
+        "variableMappings": [
+          {
+            "actionId": "d00d53a0-e3a1-45ff-9b58-67547e2787f0",
+            "actionResult": "d00d53a0-e3a1-45ff-9b58-67547e2787f0:environment",
+            "variableName": "environment",
+            "type": "String"
+          }
+        ],
+        "variables": [],
+        "results": [],
+        "logs": [],
+        "status": 0,
+        "breakPoint": "None",
+        "datastoreReferences": []
+      },
+      {
+        "name": "Get Table Data",
+        "type": "GetTableData",
+        "version": "5.0.1",
+        "actionId": "37ae317f-37b5-49ae-8b3a-70e17d8ef735",
+        "actionDefinitionActionId": "f047f456-c20b-4b7f-bf73-510a3595c9b3",
+        "disabled": false,
+        "created": "0001-01-01T00:00:00Z",
+        "updated": "0001-01-01T00:00:00Z",
+        "isDeactivated": false,
+        "parameters": [
+          {
+            "key": "table",
+            "type": "TableV3",
+            "value": "\u0022\u00A3\u00A3!83656967-5121-437a-a9cb-9d62183b9c5b:environments\u00A3\u00A3\u0022"
+          },
+          {
+            "key": "includeRowCount",
+            "type": "Boolean",
+            "value": "true"
+          },
+          {
+            "key": "queryString",
+            "type": "Query",
+            "value": "[{\u0022field\u0022:\u0022env_url\u0022,\u0022operator\u0022:\u0022=\u0022,\u0022value\u0022:\u0022$$environment$$\u0022,\u0022caseSensitive\u0022:false}]"
+          },
+          {
+            "key": "selectedColumns",
+            "type": "Array",
+            "value": "[]"
+          },
+          {
+            "key": "returnWithoutData",
+            "type": "Boolean",
+            "value": "false"
+          },
+          {
+            "key": "yield",
+            "type": "Number"
+          },
+          {
+            "key": "offSet",
+            "type": "Number"
+          },
+          {
+            "key": "timeout",
+            "type": "Number",
+            "value": "30000"
+          },
+          {
+            "key": "errorOnTimeout",
+            "type": "Boolean",
+            "value": "true"
+          },
+          {
+            "key": "failOnError",
+            "type": "Boolean",
+            "value": "true"
+          },
+          {
+            "key": "redacted",
+            "type": "Boolean",
+            "value": "false"
+          }
+        ],
+        "actions": [],
+        "context": [],
+        "tables": [],
+        "lists": [],
+        "variableMappings": [],
+        "variables": [],
+        "results": [],
+        "logs": [],
+        "status": 0,
+        "breakPoint": "None",
+        "datastoreReferences": [
+          {
+            "datastoreId": "83656967-5121-437a-a9cb-9d62183b9c5b",
+            "variableName": "environments"
+          }
+        ]
+      },
+      {
+        "name": "Set Variable",
+        "type": "VariableSetV2",
+        "version": "1.1.2",
+        "actionId": "f698a78c-ae0b-41d7-9c81-adf64d45c56b",
+        "actionDefinitionActionId": "32b3480c-118e-42ce-99dd-1c25aa93d742",
+        "disabled": false,
+        "created": "0001-01-01T00:00:00Z",
+        "updated": "0001-01-01T00:00:00Z",
+        "isDeactivated": false,
+        "parameters": [
+          {
+            "key": "variable",
+            "type": "String",
+            "value": "\u0022environment_id\u0022"
+          },
+          {
+            "key": "variableType",
+            "type": "String",
+            "value": "\u0022String\u0022"
+          },
+          {
+            "key": "data",
+            "type": "String",
+            "value": "\u0022\u0022"
+          },
+          {
+            "key": "failOnError",
+            "type": "Boolean",
+            "value": "true"
+          },
+          {
+            "key": "redacted",
+            "type": "Boolean",
+            "value": "false"
+          }
+        ],
+        "actions": [],
+        "context": [],
+        "tables": [],
+        "lists": [],
+        "variableMappings": [
+          {
+            "actionId": "f698a78c-ae0b-41d7-9c81-adf64d45c56b",
+            "actionResult": "f698a78c-ae0b-41d7-9c81-adf64d45c56b:environment_id",
+            "variableName": "environment_id",
+            "type": "String"
+          }
+        ],
+        "variables": [],
+        "results": [],
+        "logs": [],
+        "status": 0,
+        "breakPoint": "None",
+        "datastoreReferences": []
+      },
+      {
+        "name": "Add Row to Table",
+        "type": "AddRowToTable",
+        "version": "4.0.1",
+        "actionId": "a6d4feab-cd1d-42ed-8a01-e5758e2d3ffa",
+        "actionDefinitionActionId": "69c7447c-e71a-4849-862f-18e509c0e3bc",
+        "disabled": true,
+        "created": "0001-01-01T00:00:00Z",
+        "updated": "0001-01-01T00:00:00Z",
+        "isDeactivated": false,
+        "parameters": [
+          {
+            "key": "table",
+            "type": "TableV3",
+            "value": "\u0022\u00A3\u00A3!83656967-5121-437a-a9cb-9d62183b9c5b:alerts\u00A3\u00A3\u0022"
+          },
+          {
+            "key": "record",
+            "type": "Record",
+            "value": "{\u0022environment\u0022:\u0022$$environment_id$$\u0022,\u0022message\u0022:\u0022$$alert_message$$\u0022}"
+          },
+          {
+            "key": "multiplePerms",
+            "type": "String",
+            "value": "\u0022single\u0022"
+          },
+          {
+            "key": "userId",
+            "type": "String",
+            "value": "\u0022\u0022"
+          },
+          {
+            "key": "permission",
+            "type": "String",
+            "value": "\u0022\u0022"
+          },
+          {
+            "key": "timeout",
+            "type": "Number",
+            "value": "30000"
+          },
+          {
+            "key": "errorOnTimeout",
+            "type": "Boolean",
+            "value": "true"
+          },
+          {
+            "key": "failOnError",
+            "type": "Boolean",
+            "value": "true"
+          },
+          {
+            "key": "redacted",
+            "type": "Boolean",
+            "value": "false"
+          }
+        ],
+        "actions": [],
+        "context": [],
+        "tables": [],
+        "lists": [],
+        "variableMappings": [],
+        "variables": [],
+        "results": [],
+        "logs": [],
+        "status": 0,
+        "breakPoint": "None",
+        "datastoreReferences": [
+          {
+            "datastoreId": "83656967-5121-437a-a9cb-9d62183b9c5b",
+            "variableName": "alerts"
+          }
+        ]
+      }
+    ],
+    "variableMappings": [
+      {
+        "actionResult": "Body",
+        "variableName": "Body",
+        "type": "json"
+      },
+      {
+        "actionId": "a82b1ce2-5cd6-4aa2-ab06-340b3a44db10",
+        "actionResult": "a82b1ce2-5cd6-4aa2-ab06-340b3a44db10:alert_message",
+        "variableName": "alert_message",
+        "type": "String"
+      },
+      {
+        "actionId": "d00d53a0-e3a1-45ff-9b58-67547e2787f0",
+        "actionResult": "d00d53a0-e3a1-45ff-9b58-67547e2787f0:environment",
+        "variableName": "environment",
+        "type": "String"
+      },
+      {
+        "actionId": "f698a78c-ae0b-41d7-9c81-adf64d45c56b",
+        "actionResult": "f698a78c-ae0b-41d7-9c81-adf64d45c56b:environment_id",
+        "variableName": "environment_id",
+        "type": "String"
+      }
+    ],
+    "outputMappings": [],
+    "metaData": [
+      {
+        "key": "inputs",
+        "type": "Array\u003CParameter\u003E",
+        "value": "[{\u0022type\u0022:\u0022json\u0022,\u0022key\u0022:\u0022Body\u0022,\u0022value\u0022:\u0022{ \\\u0022message\\\u0022: \\\u0022Bots offline\\\u0022, \\\u0022env\\\u0022: \\\u0022toca.rbbh-tr.nhs.uk\\\u0022}\u0022}]"
+      }
+    ],
+    "deleted": false,
+    "activityServiceType": "Stateless",
+    "migratedToBotUuid": false,
+    "datastoreReferences": [
+      {
+        "datastoreId": "83656967-5121-437a-a9cb-9d62183b9c5b",
+        "variableName": "environments"
+      }
+    ],
+    "workspaceId": "2c7411c1-8840-47df-9613-e37764be0bd1",
+    "resourceId": "0ecf74b2-0744-4a75-bd0f-6f61a1f1d4f7",
+    "name": "Capture Alert"
+  }
+}

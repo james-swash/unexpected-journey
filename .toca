@@ -1,4 +1,23 @@
 {
   "version": 1,
-  "workspaceId": "2c7411c1-8840-47df-9613-e37764be0bd1"
+  "workspaceId": "2c7411c1-8840-47df-9613-e37764be0bd1",
+  "resources": [
+    {
+      "type": "GitActivityResource",
+      "id": "0ecf74b2-0744-4a75-bd0f-6f61a1f1d4f7",
+      "path": "Activity/0ecf74b2-0744-4a75-bd0f-6f61a1f1d4f7.activity",
+      "dependencies": {
+        "componentMapping": {},
+        "appActionMapping": {},
+        "components": [],
+        "actions": [
+          "32b3480c-118e-42ce-99dd-1c25aa93d742",
+          "f047f456-c20b-4b7f-bf73-510a3595c9b3",
+          "69c7447c-e71a-4849-862f-18e509c0e3bc"
+        ],
+        "appActions": []
+      }
+    }
+  ],
+  "environmentMappings": []
 }

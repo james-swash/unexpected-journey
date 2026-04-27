@@ -1,0 +1,18 @@
+{
+  "metadata": {
+    "id": "27a14770-cf82-428c-98c8-2bca8878cdb5",
+    "platformVersion": "10.0.0",
+    "createdAt": "2026-04-27T16:41:18Z",
+    "createdBy": "8b556a4c-9ed1-4104-a4f4-5b8c2c7088b6",
+    "schemaVersion": "1.0.0"
+  },
+  "content": {
+    "projectId": "27a14770-cf82-428c-98c8-2bca8878cdb5",
+    "description": "APIs and Automation",
+    "deactivated": false,
+    "actionGroups": [],
+    "workspaceId": "2c7411c1-8840-47df-9613-e37764be0bd1",
+    "resourceId": "27a14770-cf82-428c-98c8-2bca8878cdb5",
+    "name": "API Layer"
+  }
+}
