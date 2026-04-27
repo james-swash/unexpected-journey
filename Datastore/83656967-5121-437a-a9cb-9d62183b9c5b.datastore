@@ -1,0 +1,398 @@
+{
+  "metadata": {
+    "id": "83656967-5121-437a-a9cb-9d62183b9c5b",
+    "platformVersion": "10.0.0",
+    "createdAt": "2026-04-27T15:49:40Z",
+    "createdBy": "8b556a4c-9ed1-4104-a4f4-5b8c2c7088b6",
+    "schemaVersion": "1.0.0"
+  },
+  "content": {
+    "uuid": "83656967-5121-437a-a9cb-9d62183b9c5b",
+    "description": "data",
+    "datastoreType": "Internal",
+    "datastoreParameters": [
+      {
+        "datastoreId": "83656967-5121-437a-a9cb-9d62183b9c5b",
+        "uuid": "019dcfa1-ce27-7280-924b-beefa9a59b8b",
+        "key": "fileDrive",
+        "type": "FilesLocator",
+        "value": "{\u0022type\u0022:\u0022ObjectStore\u0022}",
+        "revision": "019dcfa1-ce28-77cd-87ef-466c12918e61"
+      },
+      {
+        "datastoreId": "83656967-5121-437a-a9cb-9d62183b9c5b",
+        "uuid": "019dcfa5-4823-7597-afcb-ae761997db7f",
+        "key": "environments",
+        "type": "TableV3",
+        "value": "019dcfa5-4823-7597-afcb-ae761997db7f",
+        "revision": "019dcfa6-6654-70ad-ace5-3afb2ba7ad00"
+      },
+      {
+        "datastoreId": "83656967-5121-437a-a9cb-9d62183b9c5b",
+        "uuid": "019dcfc8-3edb-74d1-ab57-923daa20c5fe",
+        "key": "kpi",
+        "type": "TableV3",
+        "value": "019dcfc8-3edb-74d1-ab57-923daa20c5fe",
+        "revision": "019dcfc9-4132-73e9-9b93-fcb689c72386"
+      },
+      {
+        "datastoreId": "83656967-5121-437a-a9cb-9d62183b9c5b",
+        "uuid": "019dcfca-3808-705b-b44c-105e9bba6f37",
+        "key": "alerts",
+        "type": "TableV3",
+        "value": "019dcfca-3808-705b-b44c-105e9bba6f37",
+        "revision": "019dcfca-3808-705c-9656-1bce645ceb77"
+      }
+    ],
+    "tables": [
+      {
+        "id": "019dcfa5-4823-7597-afcb-ae761997db7f",
+        "datastoreParameterId": "019dcfa5-4823-7597-afcb-ae761997db7f",
+        "model": {
+          "id": {
+            "name": "id",
+            "label": "id",
+            "type": "uuid",
+            "isPrimaryKey": true,
+            "constraints": {
+              "isUnique": false,
+              "isNotNull": true,
+              "dataType": "Uuid"
+            }
+          },
+          "created": {
+            "name": "created",
+            "label": "Created",
+            "type": "datetime",
+            "isPrimaryKey": false,
+            "metaData": {
+              "autoGenerate": true
+            },
+            "constraints": {
+              "isUnique": false,
+              "isNotNull": false,
+              "dataType": "DateTime"
+            }
+          },
+          "updated": {
+            "name": "updated",
+            "label": "Updated",
+            "type": "datetime",
+            "isPrimaryKey": false,
+            "metaData": {
+              "autoGenerate": true,
+              "autoUpdate": true
+            },
+            "constraints": {
+              "isUnique": false,
+              "isNotNull": false,
+              "dataType": "DateTime"
+            }
+          },
+          "customer": {
+            "name": "customer",
+            "label": "Customer",
+            "type": "string",
+            "isPrimaryKey": false,
+            "constraints": {
+              "isUnique": false,
+              "isNotNull": false,
+              "dataType": "Text"
+            }
+          },
+          "env_url": {
+            "name": "env_url",
+            "label": "Env URL",
+            "type": "string",
+            "isPrimaryKey": false,
+            "constraints": {
+              "isUnique": false,
+              "isNotNull": false,
+              "dataType": "Text"
+            }
+          },
+          "env_name": {
+            "name": "env_name",
+            "label": "Env Name",
+            "type": "string",
+            "isPrimaryKey": false,
+            "constraints": {
+              "isUnique": false,
+              "isNotNull": false,
+              "dataType": "Text"
+            }
+          }
+        },
+        "relationships": [],
+        "selectQuery": "SELECT c.\u0060created\u0060 AS \u0027c.created\u0027,c.\u0060customer\u0060 AS \u0027c.customer\u0027,c.\u0060env_name\u0060 AS \u0027c.env_name\u0027,c.\u0060env_url\u0060 AS \u0027c.env_url\u0027,c.\u0060id\u0060 AS \u0027c.id\u0027,c.\u0060updated\u0060 AS \u0027c.updated\u0027 FROM \u0060019dcfa5-4823-7597-afcb-ae761997db7f\u0060 c",
+        "nonRecursiveSelectQuery": "SELECT c.* FROM \u0060019dcfa5-4823-7597-afcb-ae761997db7f\u0060 c ",
+        "indexes": [
+          {
+            "name": "PRIMARY",
+            "columns": {
+              "id": "Ascending"
+            },
+            "unique": true,
+            "type": "BTree"
+          }
+        ],
+        "position": [
+          4,
+          18
+        ],
+        "revision": "019dcfa5-4872-7091-8879-f8c1518cc11d"
+      },
+      {
+        "id": "019dcfc8-3edb-74d1-ab57-923daa20c5fe",
+        "datastoreParameterId": "019dcfc8-3edb-74d1-ab57-923daa20c5fe",
+        "model": {
+          "id": {
+            "name": "id",
+            "label": "id",
+            "type": "uuid",
+            "isPrimaryKey": true,
+            "constraints": {
+              "isUnique": false,
+              "isNotNull": true,
+              "dataType": "Uuid"
+            }
+          },
+          "created": {
+            "name": "created",
+            "label": "Created",
+            "type": "datetime",
+            "isPrimaryKey": false,
+            "metaData": {
+              "autoGenerate": true
+            },
+            "constraints": {
+              "isUnique": false,
+              "isNotNull": false,
+              "dataType": "DateTime"
+            }
+          },
+          "updated": {
+            "name": "updated",
+            "label": "Updated",
+            "type": "datetime",
+            "isPrimaryKey": false,
+            "metaData": {
+              "autoGenerate": true,
+              "autoUpdate": true
+            },
+            "constraints": {
+              "isUnique": false,
+              "isNotNull": false,
+              "dataType": "DateTime"
+            }
+          },
+          "environments": {
+            "name": "environments",
+            "label": "environments",
+            "type": "uuid",
+            "isPrimaryKey": false,
+            "constraints": {
+              "isUnique": false,
+              "isNotNull": false,
+              "dataType": "Uuid"
+            }
+          },
+          "completed_triages": {
+            "name": "completed_triages",
+            "label": "Completed triages",
+            "type": "number",
+            "defaultValue": 0,
+            "isPrimaryKey": false,
+            "constraints": {
+              "isUnique": false,
+              "isNotNull": false,
+              "dataType": "Double"
+            }
+          },
+          "exceptions_count": {
+            "name": "exceptions_count",
+            "label": "Exceptions count",
+            "type": "number",
+            "defaultValue": 0,
+            "isPrimaryKey": false,
+            "constraints": {
+              "isUnique": false,
+              "isNotNull": false,
+              "dataType": "Double"
+            }
+          },
+          "action_queue": {
+            "name": "action_queue",
+            "label": "Action queue",
+            "type": "number",
+            "defaultValue": 0,
+            "isPrimaryKey": false,
+            "constraints": {
+              "isUnique": false,
+              "isNotNull": false,
+              "dataType": "Double"
+            }
+          }
+        },
+        "relationships": [],
+        "selectQuery": "SELECT c.\u0060action_queue\u0060 AS \u0027c.action_queue\u0027,c.\u0060completed_triages\u0060 AS \u0027c.completed_triages\u0027,c.\u0060created\u0060 AS \u0027c.created\u0027,c.\u0060environments\u0060 AS \u0027c.environments\u0027,c.\u0060exceptions_count\u0060 AS \u0027c.exceptions_count\u0027,c.\u0060id\u0060 AS \u0027c.id\u0027,c.\u0060updated\u0060 AS \u0027c.updated\u0027 FROM \u0060019dcfc8-3edb-74d1-ab57-923daa20c5fe\u0060 c",
+        "nonRecursiveSelectQuery": "SELECT c.* FROM \u0060019dcfc8-3edb-74d1-ab57-923daa20c5fe\u0060 c ",
+        "indexes": [
+          {
+            "name": "PRIMARY",
+            "columns": {
+              "id": "Ascending"
+            },
+            "unique": true,
+            "type": "BTree"
+          }
+        ],
+        "position": [
+          14,
+          39
+        ],
+        "revision": "019dcfc8-3ee2-7071-87e2-357b3c8dbaf1"
+      },
+      {
+        "id": "019dcfca-3808-705b-b44c-105e9bba6f37",
+        "datastoreParameterId": "019dcfca-3808-705b-b44c-105e9bba6f37",
+        "model": {
+          "id": {
+            "name": "id",
+            "label": "id",
+            "type": "uuid",
+            "isPrimaryKey": true,
+            "constraints": {
+              "isUnique": false,
+              "isNotNull": true
+            }
+          },
+          "created": {
+            "name": "created",
+            "label": "Created",
+            "type": "datetime",
+            "isPrimaryKey": false,
+            "metaData": {
+              "autoGenerate": true
+            },
+            "constraints": {
+              "isUnique": false,
+              "isNotNull": false
+            }
+          },
+          "updated": {
+            "name": "updated",
+            "label": "Updated",
+            "type": "datetime",
+            "isPrimaryKey": false,
+            "metaData": {
+              "autoGenerate": true,
+              "autoUpdate": true
+            },
+            "constraints": {
+              "isUnique": false,
+              "isNotNull": false
+            }
+          },
+          "environment": {
+            "name": "environment",
+            "label": "environment",
+            "type": "uuid",
+            "isPrimaryKey": false,
+            "constraints": {
+              "isUnique": false,
+              "isNotNull": false
+            }
+          },
+          "message": {
+            "name": "message",
+            "label": "message",
+            "type": "string",
+            "isPrimaryKey": false,
+            "constraints": {
+              "isUnique": false,
+              "isNotNull": false
+            }
+          }
+        },
+        "relationships": [],
+        "selectQuery": "SELECT c.\u0060created\u0060 AS \u0027c.created\u0027,c.\u0060environment\u0060 AS \u0027c.environment\u0027,c.\u0060id\u0060 AS \u0027c.id\u0027,c.\u0060message\u0060 AS \u0027c.message\u0027,c.\u0060updated\u0060 AS \u0027c.updated\u0027 FROM \u0060019dcfca-3808-705b-b44c-105e9bba6f37\u0060 c",
+        "nonRecursiveSelectQuery": "SELECT c.* FROM \u0060019dcfca-3808-705b-b44c-105e9bba6f37\u0060 c ",
+        "indexes": [
+          {
+            "name": "PRIMARY",
+            "columns": {
+              "id": "Ascending"
+            },
+            "unique": true,
+            "type": "BTree"
+          }
+        ],
+        "position": [
+          36,
+          32
+        ],
+        "revision": "019dcfca-380f-7088-b657-85109dfd3797"
+      }
+    ],
+    "tableMigrations": [
+      {
+        "revisionId": "019dcfa6-660e-76f9-9f75-56c9c922901e",
+        "tableName": "019dcfa5-4823-7597-afcb-ae761997db7f",
+        "created": "2026-04-27T15:54:42Z",
+        "upSql": "DROP INDEX IF EXISTS \u0060PRIMARY\u0060 ON \u0060019dcfa5-4823-7597-afcb-ae761997db7f\u0060;",
+        "upFriendlyName": "Drop index \u0060PRIMARY\u0060 on table \u0060environments\u0060",
+        "downSql": "CREATE UNIQUE INDEX \u0060PRIMARY\u0060 ON \u0060019dcfa5-4823-7597-afcb-ae761997db7f\u0060 (\u0060id\u0060 ASC) USING BTREE;",
+        "downFriendlyName": "Add index \u0060PRIMARY\u0060 to table \u0060environments\u0060"
+      },
+      {
+        "revisionId": "019dcfa6-6654-70ad-ace5-3afb2ba7ad00",
+        "tableName": "019dcfa5-4823-7597-afcb-ae761997db7f",
+        "created": "2026-04-27T15:54:42Z",
+        "upSql": "ALTER TABLE \u0060019dcfa5-4823-7597-afcb-ae761997db7f\u0060 ADD \u0060env_name\u0060 TEXT CHARACTER SET utf8mb4 NULL;\n",
+        "upFriendlyName": "Add column \u0060env_name\u0060 to table \u0060environments\u0060",
+        "downSql": "ALTER TABLE \u0060019dcfa5-4823-7597-afcb-ae761997db7f\u0060 DROP COLUMN \u0060env_name\u0060;",
+        "downFriendlyName": "Drop column \u0060env_name\u0060 from table \u0060environments\u0060"
+      },
+      {
+        "revisionId": "019dcfc9-20ac-7272-8ad8-2212961b34f6",
+        "tableName": "019dcfc8-3edb-74d1-ab57-923daa20c5fe",
+        "created": "2026-04-27T16:32:38Z",
+        "upSql": "DROP INDEX IF EXISTS \u0060PRIMARY\u0060 ON \u0060019dcfc8-3edb-74d1-ab57-923daa20c5fe\u0060;",
+        "upFriendlyName": "Drop index \u0060PRIMARY\u0060 on table \u0060kpi\u0060",
+        "downSql": "CREATE UNIQUE INDEX \u0060PRIMARY\u0060 ON \u0060019dcfc8-3edb-74d1-ab57-923daa20c5fe\u0060 (\u0060id\u0060 ASC) USING BTREE;",
+        "downFriendlyName": "Add index \u0060PRIMARY\u0060 to table \u0060kpi\u0060"
+      },
+      {
+        "revisionId": "019dcfc9-20f5-700b-a12a-7b831f8fe924",
+        "tableName": "019dcfc8-3edb-74d1-ab57-923daa20c5fe",
+        "created": "2026-04-27T16:32:38Z",
+        "upSql": "SET @constraint_name = (\n    SELECT CONSTRAINT_NAME \n    FROM information_schema.KEY_COLUMN_USAGE \n    WHERE TABLE_SCHEMA = \u0027TablesV3\u0027 \n      AND TABLE_NAME = \u0027019dcfc8-3edb-74d1-ab57-923daa20c5fe\u0027 \n      AND COLUMN_NAME = \u0027completed_triages\u0027 \n      AND REFERENCED_TABLE_NAME IS NOT NULL\n    LIMIT 1\n);\n\nSET @sql = IF(@constraint_name IS NOT NULL,\n    CONCAT(\u0027ALTER TABLE \u0060019dcfc8-3edb-74d1-ab57-923daa20c5fe\u0060 DROP FOREIGN KEY \u0060\u0027, @constraint_name, \u0027\u0060\u0027),\n    \u0027SELECT \u0027\u0027No foreign key constraint found\u0027\u0027 AS message\u0027\n);\n\nPREPARE stmt FROM @sql;\nEXECUTE stmt;\nDEALLOCATE PREPARE stmt;\nALTER TABLE \u0060019dcfc8-3edb-74d1-ab57-923daa20c5fe\u0060 MODIFY \u0060completed_triages\u0060 DOUBLE  NULL;\n",
+        "upFriendlyName": "Change column type of \u0060completed_triages\u0060 in table \u0060kpi\u0060",
+        "downSql": "ALTER TABLE \u0060019dcfc8-3edb-74d1-ab57-923daa20c5fe\u0060 MODIFY \u0060completed_triages\u0060 DOUBLE NULL;",
+        "downFriendlyName": "Revert column type change of \u0060completed_triages\u0060 in table \u0060kpi\u0060"
+      },
+      {
+        "revisionId": "019dcfc9-3028-76f5-8aa6-f50e785f8281",
+        "tableName": "019dcfc8-3edb-74d1-ab57-923daa20c5fe",
+        "created": "2026-04-27T16:32:42Z",
+        "upSql": "SET @constraint_name = (\n    SELECT CONSTRAINT_NAME \n    FROM information_schema.KEY_COLUMN_USAGE \n    WHERE TABLE_SCHEMA = \u0027TablesV3\u0027 \n      AND TABLE_NAME = \u0027019dcfc8-3edb-74d1-ab57-923daa20c5fe\u0027 \n      AND COLUMN_NAME = \u0027exceptions_count\u0027 \n      AND REFERENCED_TABLE_NAME IS NOT NULL\n    LIMIT 1\n);\n\nSET @sql = IF(@constraint_name IS NOT NULL,\n    CONCAT(\u0027ALTER TABLE \u0060019dcfc8-3edb-74d1-ab57-923daa20c5fe\u0060 DROP FOREIGN KEY \u0060\u0027, @constraint_name, \u0027\u0060\u0027),\n    \u0027SELECT \u0027\u0027No foreign key constraint found\u0027\u0027 AS message\u0027\n);\n\nPREPARE stmt FROM @sql;\nEXECUTE stmt;\nDEALLOCATE PREPARE stmt;\nALTER TABLE \u0060019dcfc8-3edb-74d1-ab57-923daa20c5fe\u0060 MODIFY \u0060exceptions_count\u0060 DOUBLE  NULL;\n",
+        "upFriendlyName": "Change column type of \u0060exceptions_count\u0060 in table \u0060kpi\u0060",
+        "downSql": "ALTER TABLE \u0060019dcfc8-3edb-74d1-ab57-923daa20c5fe\u0060 MODIFY \u0060exceptions_count\u0060 DOUBLE NULL;",
+        "downFriendlyName": "Revert column type change of \u0060exceptions_count\u0060 in table \u0060kpi\u0060"
+      },
+      {
+        "revisionId": "019dcfc9-4132-73e9-9b93-fcb689c72386",
+        "tableName": "019dcfc8-3edb-74d1-ab57-923daa20c5fe",
+        "created": "2026-04-27T16:32:46Z",
+        "upSql": "SET @constraint_name = (\n    SELECT CONSTRAINT_NAME \n    FROM information_schema.KEY_COLUMN_USAGE \n    WHERE TABLE_SCHEMA = \u0027TablesV3\u0027 \n      AND TABLE_NAME = \u0027019dcfc8-3edb-74d1-ab57-923daa20c5fe\u0027 \n      AND COLUMN_NAME = \u0027action_queue\u0027 \n      AND REFERENCED_TABLE_NAME IS NOT NULL\n    LIMIT 1\n);\n\nSET @sql = IF(@constraint_name IS NOT NULL,\n    CONCAT(\u0027ALTER TABLE \u0060019dcfc8-3edb-74d1-ab57-923daa20c5fe\u0060 DROP FOREIGN KEY \u0060\u0027, @constraint_name, \u0027\u0060\u0027),\n    \u0027SELECT \u0027\u0027No foreign key constraint found\u0027\u0027 AS message\u0027\n);\n\nPREPARE stmt FROM @sql;\nEXECUTE stmt;\nDEALLOCATE PREPARE stmt;\nALTER TABLE \u0060019dcfc8-3edb-74d1-ab57-923daa20c5fe\u0060 MODIFY \u0060action_queue\u0060 DOUBLE  NULL;\n",
+        "upFriendlyName": "Change column type of \u0060action_queue\u0060 in table \u0060kpi\u0060",
+        "downSql": "ALTER TABLE \u0060019dcfc8-3edb-74d1-ab57-923daa20c5fe\u0060 MODIFY \u0060action_queue\u0060 DOUBLE NULL;",
+        "downFriendlyName": "Revert column type change of \u0060action_queue\u0060 in table \u0060kpi\u0060"
+      }
+    ],
+    "workspaceId": "2c7411c1-8840-47df-9613-e37764be0bd1",
+    "resourceId": "83656967-5121-437a-a9cb-9d62183b9c5b",
+    "name": "Data"
+  }
+}
